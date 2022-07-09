@@ -1,0 +1,9 @@
+[user]
+       name=  Subham Bharadwaz
+	email = 443443+dafdcad.noreply.github.com
+
+[includeIf "gitdir:~/work/"]
+    path = ~/work/.gitconfig
+[core]
+	editor = vim
+

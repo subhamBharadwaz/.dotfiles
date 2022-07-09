@@ -1,0 +1,74 @@
+{
+  "npm.enableScriptExplorer": true,
+  "editor.fontSize": 16,
+  "editor.wordWrap": "on",
+
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "php.validate.executablePath": "C:\\xampp\\php\\php.exe",
+
+  "editor.formatOnSave": true,
+  "workbench.settings.editor": "json",
+  "editor.fontFamily": "Dank Mono",
+  "workbench.settings.openDefaultKeybindings": true,
+  "editor.fontLigatures": true,
+  "editor.cursorBlinking": "expand",
+  "files.associations": {
+    "*.jsx": "javascriptreact",
+    "*.js": "javascriptreact",
+    "*.mdx": "mdx"
+  },
+  "emmet.includeLanguages": {
+    "mdx": "html"
+  },
+  "[mdx]": {
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 100
+  },
+
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.linkedEditing": true,
+  "terminal.integrated.cursorBlinking": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "workbench.colorTheme": "One Dark Pro Darker",
+  "workbench.iconTheme": "material-icon-theme",
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.editorAssociations": {
+    "*.md": "default"
+  },
+  "workbench.colorCustomizations": {
+    "[Night Owl]": {
+      "activityBar.background": "#000C1D",
+      "activityBar.border": "#102a44",
+      "sideBar.background": "#001122",
+      "sideBar.border": "#102a44",
+      "sideBar.foreground": "#8BADC1"
+    }
+  },
+
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "css.lint.unknownAtRules": "ignore",
+  "terminal.integrated.defaultProfile.linux": "bash (2)",
+  "editor.minimap.enabled": false,
+  "workbench.sideBar.location": "right",
+  "explorer.openEditors.visible": 0,
+  "js/ts.implicitProjectConfig.checkJs": false,
+  "workbench.settings.useSplitJSON": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": false,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false
+  },
+  "cSpell.userWords": ["openapi"],
+  "redhat.telemetry.enabled": true,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "thunder-client.codeSnippetLanguage": "cs-httpclient",
+  "tabnine.experimentalAutoImports": true
+}
