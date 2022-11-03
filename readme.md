@@ -10,3 +10,7 @@ This is the configuration I use for my development laptop (WSL included). It’s
 - WSL customizations
 - Windows Terminal customizations
 - VS Code settings and aliases to use them
+- Kitty and Alacrity configs
+- Neovim configs
+- Tmux configs
+- Hyper configs
