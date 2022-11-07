@@ -92,7 +92,7 @@ lspconfig["prismals"].setup({
 lspconfig["sumneko_lua"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
-	settings = { -- custom settings for lua
+	setings = { -- custom settings for lua
 		Lua = {
 			-- make the language server recognize "vim" global
 			diagnostics = {

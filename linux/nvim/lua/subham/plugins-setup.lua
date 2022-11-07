@@ -33,7 +33,9 @@ return packer.startup(function(use)
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
-	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
+	use("goolord/alpha-nvim") -- dashboard
+
+	use("navarasu/onedark.nvim") -- colorscheme
 
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
@@ -46,27 +48,59 @@ return packer.startup(function(use)
 	-- commenting with gc
 	use("numToStr/Comment.nvim")
 
+	-- Todo comments
+	use("folke/todo-comments.nvim")
+
 	-- file explorer
 	use("nvim-tree/nvim-tree.lua")
 
+	use("noib3/nvim-cokeline") -- buffering
+
 	-- vs-code like icons
 	use("kyazdani42/nvim-web-devicons")
+
 	-- statusline
 	use("nvim-lualine/lualine.nvim")
+
+	-- Color
+	use("NvChad/nvim-colorizer.lua")
 
 	-- fuzzy finding w/ telescope
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
+  use "nvim-telescope/telescope-media-files.nvim"
 
 	-- autocompletion
 	use("hrsh7th/nvim-cmp") -- completion plugin
 	use("hrsh7th/cmp-buffer") -- source for text in buffer
 	use("hrsh7th/cmp-path") -- source for file system paths
 
+	-- Project
+	use("ahmedkhalf/project.nvim")
+	use("windwp/nvim-spectre")
+
 	-- snippets
 	use("L3MON4D3/LuaSnip") -- snippet engine
 	use("saadparwaiz1/cmp_luasnip") -- for autocompletion
 	use("rafamadriz/friendly-snippets") -- useful snippets
+
+	-- Utility
+	use("rcarriga/nvim-notify")
+	use("ghillb/cybu.nvim")
+	use("stevearc/dressing.nvim")
+	use("moll/vim-bbye")
+	use("lewis6991/impatient.nvim")
+
+	-- Editing support
+	use("karb94/neoscroll.nvim")
+	use("nacro90/numb.nvim")
+	use("folke/zen-mode.nvim")
+
+	-- Motion
+	use("phaazon/hop.nvim")
+
+	-- Quickfix
+	use("kevinhwang91/nvim-bqf")
 
 	-- managing & installing lsp servers, linters & formatters
 	use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
@@ -78,6 +112,10 @@ return packer.startup(function(use)
 	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
 	use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
+	use("lvimuser/lsp-inlayhints.nvim")
+	use("j-hui/fidget.nvim")
+	use("RRethy/vim-illuminate")
+	use("simrat39/symbols-outline.nvim")
 
 	-- formatting & linting
 	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
@@ -95,11 +133,40 @@ return packer.startup(function(use)
 	use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
 	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
 
+	-- tabout
+	use({
+		"abecodes/tabout.nvim",
+		wants = { "nvim-treesitter" }, -- or require if not used so far
+	})
+
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
+	use("f-person/git-blame.nvim")
+	use("ruifm/gitlinker.nvim")
+	use("mattn/vim-gist")
+	use("mattn/webapi-vim")
 
 	-- auto rename tags
 	use("AndrewRadev/tagalong.vim")
+
+	-- sessions
+	use("rmagatti/auto-session")
+	use("rmagatti/session-lens")
+
+	use("folke/which-key.nvim") -- which key
+
+	use("akinsho/toggleterm.nvim") -- toggle terminal
+
+	--use("github/copilot.vim") -- github copilot
+	-- use({
+	-- 	"zbirenbaum/copilot.lua",
+	-- 	event = { "VimEnter" },
+	-- 	config = function()
+	-- 		vim.defer_fn(function()
+	-- 			require("copilot")
+	-- 		end, 100)
+	-- 	end,
+	-- })
 
 	if packer_bootstrap then
 		require("packer").sync()

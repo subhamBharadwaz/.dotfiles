@@ -1,8 +1,8 @@
--- set leader key to space
+-- et leader key to space
 vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
-
+keymap.set("n", "<C-Space>", "<cmd>WhichKey \\<leader><cr>")
 ---------------------
 -- General Keymaps
 ---------------------
@@ -47,3 +47,15 @@ keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in 
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
+keymap.set("n", "<leader>fH", "<cmd>Telescope highlights<cr>") -- list available highlights
+keymap.set("n", "<leader>fi", "<cmd>lua require('telescope').extensions.media_files.media_files()<cr>") -- Media
+keymap.set("n", "<leader>fl", "<cmd>Telescope resume<cr>") -- Last serach
+keymap.set("n", "<leader>fM", "<cmd>Telescope man_pages<cr>") -- Man pages
+keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>") -- Recent files
+keymap.set("n", "<leader>fR", "<cmd>Telescope registers<cr>") -- Registers
+keymap.set("n", "<leader>fk", "<cmd>Telescope Keymaps<cr>") -- Keymaps
+keymap.set("n", "<leader>fC", "<cmd>Telescope commands<cr>") -- Commands
+
+-- comment
+keymap.set("n", "<m-/>", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>")
+keymap.set("x", "<m-/>", '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>')
